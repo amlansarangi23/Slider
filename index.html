@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Sofia"
+    />
+    <title>slider</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <style>
+    body {
+      font-family: Arial;
+      background-image: url("assets/background.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50rem;
+    }
+    #heading {
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 4vw;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    img#slides {
+      display: block;
+      width: 50%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      border: 3px solid black;
+    }
+
+    .container {
+      position: relative;
+    }
+
+    .mySlides {
+      display: none;
+    }
+
+    .demo {
+      opacity: 0.7;
+      cursor: pointer;
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+    }
+    .prev {
+      left: 25%;
+    }
+    .next {
+      border-radius: 3px 0 0 3px;
+      right: 25%;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+      transition-duration: 0.4s;
+    }
+
+    .numbertext {
+      color: #f2f2f2;
+      background-color: black;
+      font-size: 1.5vw;
+      padding: 8px 12px;
+      position: absolute;
+      top: 10px;
+      left: 26%;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+
+    .caption-container {
+      width: 50%;
+      text-align: center;
+      background-color: rgb(247, 199, 77);
+      color: rgb(72, 35, 35);
+      font-size: 2vw;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      border: 6px groove brown;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    .row {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      height: auto;
+      justify-content: center;
+      border: 3px groove brown;
+      background-color: #f3df98;
+    }
+    .column{
+      position: relative;
+      top: 2px;
+    }
+
+    .active,
+    .demo:hover {
+      opacity: 1;
+      transition-duration: 0.5s;
+      border: 3px solid brown;
+    }
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+  <body>
+    <h2 id="heading">Wonders of the world</h2>
+
+    <div class="container">
+      <div class="mySlides fade">
+        <div class="numbertext">1</div>
+        <img src="assets/taj-mahal.jpg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2</div>
+        <img src="assets/great-wall.jpeg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3</div>
+        <img src="assets/colosseum.jpg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">4</div>
+        <img src="assets/chichen-itza.jpg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5</div>
+        <img src="assets/christ-the-redeemer.jpg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">6</div>
+        <img src="assets/petra.jpg" id="slides" />
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">7</div>
+        <img src="assets/macchu-picchu.jpg" id="slides" />
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/taj-mahal.jpg"
+            onclick="currentSlide(1)"
+            alt="Taj Mahal"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/great-wall-of-china.jpeg"
+            onclick="currentSlide(2)"
+            alt="The Great Wall Of China"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/colosseum.jpg"
+            onclick="currentSlide(3)"
+            alt="Colosseum"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/chichen-itza.jpg"
+            onclick="currentSlide(4)"
+            alt="Chichen Itza"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/christ-the-redeemer.jpg"
+            onclick="currentSlide(5)"
+            alt="Christ The Redeemer"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/petra.jpg"
+            onclick="currentSlide(6)"
+            alt="Petra"
+          />
+        </div>
+        <div class="column">
+          <img
+            class="demo"
+            src="assets/macchu-picchu.jpg"
+            onclick="currentSlide(7)"
+            alt="Macchu Picchu"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let preview = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < preview.length; i++) {
+          preview[i].className = preview[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        preview[slideIndex - 1].className += " active";
+        captionText.innerHTML = preview[slideIndex - 1].alt;
+      }
+    </script>
+  </body>
+</html>
