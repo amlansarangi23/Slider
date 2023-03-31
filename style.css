@@ -112,7 +112,7 @@ body {
   .active,
   .demo:hover {
     opacity: 1;
-    transition-duration: 0.5s;
+    transition-duration: 0.2s;
     border: 3px solid brown;
   }
   .fade {
